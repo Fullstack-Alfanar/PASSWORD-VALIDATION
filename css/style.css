@@ -1,0 +1,121 @@
+h1 {
+  color: red;
+}
+
+.Try {
+  color: red;
+  font-weight: bolder;
+}
+
+.inpu {
+  width: 80%;
+  position: relative;
+  border-bottom: 2px dashed black;
+  margin-bottom: 40px;
+}
+
+.inpu::after {
+  content: "";
+  position: relative;
+  display: block;
+  height: 4px;
+  width: 100%;
+  background-color: #d16dff;
+  transform: scale(0);
+  transform-origin: 0%;
+  transition: transform 800ms ease;
+}
+.inpu:focus-within {
+  border-color: transparent;
+}
+.inpu:focus-within:after {
+  transform: scaleX(1);
+}
+
+.label {
+  z-index: -1;
+  position: absolute;
+  transform: translateY(-2rem);
+  transform-origin: 0%;
+  transition: transform 400ms;
+}
+.inpu:focus-within .label {
+  transform: scale(0.8) translateY(-5rem);
+}
+
+input {
+  outline: none;
+  border: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0.25rem 0;
+  background: none;
+}
+
+input:valid {
+  color: yellowgreen;
+}
+input:invalid {
+  color: orangered;
+}
+
+#Alert {
+  width: 80%;
+  background-color: aquamarine;
+  position: relative;
+  padding: 15px;
+  margin-top: 8px;
+}
+
+.valid {
+  color: green;
+}
+.valid:before {
+  position: relative;
+  left: -10px;
+  content: "✔";
+}
+.invalid {
+  color: red;
+}
+.invalid:before {
+  position: relative;
+  left: -10px;
+  content: "✖";
+}
+
+.strength {
+  display: flex;
+  height: 20px;
+  width: 80%;
+}
+.str {
+  height: 100%;
+  width: 20%;
+  transition: box-shadow 500ms;
+  box-shadow: inset 0px 0px #1f1f1f;
+}
+.str-show {
+  box-shadow: none;
+}
+.str-1 {
+  background: linear-gradient(to right, red, orangered);
+}
+.str-2 {
+  background: linear-gradient(to right, orangered, yellow);
+}
+.str-3 {
+  background: linear-gradient(to right, yellow, yellowgreen);
+}
+.str-4 {
+  background: linear-gradient(to right, yellowgreen, rgb(0, 128, 94));
+}
+.str-5 {
+  background: linear-gradient(to right, rgb(0, 128, 94), green);
+}
+.Submit {
+  width: 10%;
+  font-weight: bolder;
+  background-color: black;
+  margin-bottom: 20px;
+}
